@@ -1,0 +1,286 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #222;
+}
+
+/* Верхняя панель */
+
+header {
+    width: 100%;
+    min-height: 45px;
+    padding: 8px 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #fff;
+}
+
+.search {
+    display: flex;
+    gap: 5px;
+}
+
+.search input {
+    width: 180px;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.search button {
+    padding: 7px 14px;
+    background: #ff5638;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Видео */
+
+.video-section {
+    position: relative;
+    width: 100%;
+    padding: 20px 35px;
+    overflow: hidden;
+}
+
+.video-track {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.video-card {
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
+}
+
+.video-card a {
+    position: relative;
+    display: block;
+    height: 180px;
+    overflow: hidden;
+    background: #eee;
+    text-decoration: none;
+}
+
+.video-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.video-card a:hover img {
+    transform: scale(1.04);
+}
+
+.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ff0000;
+    color: white;
+    font-size: 22px;
+    padding: 7px 14px;
+    border-radius: 9px;
+}
+
+.youtube {
+    position: absolute;
+    bottom: 7px;
+    left: 8px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 10px;
+    padding: 5px;
+}
+
+.video-card p {
+    font-size: 12px;
+    margin-top: 9px;
+}
+
+.arrow {
+    position: absolute;
+    top: 45%;
+    z-index: 5;
+    width: 27px;
+    height: 32px;
+    border: 1px solid #ff5638;
+    background: white;
+    color: #ff5638;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 3px;
+}
+
+.next {
+    right: 3px;
+}
+
+/* Игра */
+
+.game {
+    width: 350px;
+    max-width: 90%;
+    margin: 30px auto 20px;
+    padding: 20px 15px;
+    text-align: center;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+
+.game h2 {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+#question {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+#options {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.option-btn {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 2px;
+    background: #087df0;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.option-btn:hover {
+    background: #005fc5;
+}
+
+#feedback {
+    font-size: 12px;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+#score {
+    font-weight: bold;
+}
+
+.game > p:last-of-type {
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+#nextQuestion {
+    margin-top: 12px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    background: #239b45;
+    color: white;
+    cursor: pointer;
+}
+
+/* Нижняя оранжевая панель */
+
+footer {
+    width: 100%;
+    min-height: 180px;
+    padding: 15px 10px;
+    background: #ff5638;
+    color: white;
+    text-align: center;
+}
+
+.subscription {
+    margin-bottom: 12px;
+}
+
+.subscription strong {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.subscription form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.subscription input {
+    width: 150px;
+    padding: 6px;
+    border: none;
+    border-radius: 2px;
+    font-size: 11px;
+}
+
+.subscription button {
+    padding: 6px 12px;
+    border: none;
+    background: white;
+    color: #ff5638;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+#subscribeMessage {
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.map {
+    width: 320px;
+    max-width: 90%;
+    height: 85px;
+    border: none;
+}
+
+.copyright {
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+/* Телефоны */
+
+@media (max-width: 700px) {
+    .video-track {
+        overflow-x: auto;
+    }
+
+    .video-card {
+        flex: 0 0 85%;
+    }
+
+    .game {
+        margin-top: 20px;
+    }
+}

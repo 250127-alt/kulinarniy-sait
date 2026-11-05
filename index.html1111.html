@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кулинарные советы</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header>
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="Поиск...">
+        <button id="searchButton">Найти</button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Кулинарные видео -->
+
+    <section class="video-section">
+
+        <button class="arrow prev" id="prevBtn">‹</button>
+
+        <div class="video-track" id="videoTrack">
+
+            <div class="video-card">
+                <a href="https://www.youtube.com/results?search_query=кулинарные+советы"
+                   target="_blank">
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800"
+                         alt="Кулинарные советы">
+                    <span class="play">▶</span>
+                    <span class="youtube">Watch on YouTube</span>
+                </a>
+                <p>Описание видео 1</p>
+            </div>
+
+            <div class="video-card">
+                <a href="https://www.youtube.com/results?search_query=приготовление+овощей"
+                   target="_blank">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=800"
+                         alt="Приготовление овощей">
+                    <span class="play">▶</span>
+                    <span class="youtube">Watch on YouTube</span>
+                </a>
+                <p>Описание видео 2</p>
+            </div>
+
+            <div class="video-card">
+                <a href="https://www.youtube.com/results?search_query=простые+рецепты"
+                   target="_blank">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800"
+                         alt="Полезные блюда">
+                    <span class="play">▶</span>
+                    <span class="youtube">Watch on YouTube</span>
+                </a>
+                <p>Описание видео 3</p>
+            </div>
+
+        </div>
+
+        <button class="arrow next" id="nextBtn">›</button>
+
+    </section>
+
+    <!-- Игра -->
+
+    <section class="game">
+
+        <h2>Угадай ингредиент</h2>
+
+        <p id="question"></p>
+
+        <div id="options"></div>
+
+        <p id="feedback"></p>
+
+        <p>Ваш результат: <span id="score">0</span></p>
+
+        <button id="nextQuestion" hidden>
+            Следующий вопрос
+        </button>
+
+    </section>
+
+</main>
+
+<!-- Нижняя панель -->
+
+<footer>
+
+    <div class="subscription">
+
+        <strong>Подписка на рассылку:</strong>
+
+        <form id="subscribeForm">
+            <input type="email"
+                   placeholder="Введите ваш email"
+                   required>
+
+            <button type="submit">Подписаться</button>
+        </form>
+
+        <p id="subscribeMessage"></p>
+
+    </div>
+
+    <iframe
+        class="map"
+        src="https://www.google.com/maps?q=Almaty&output=embed"
+        loading="lazy">
+    </iframe>
+
+    <p class="copyright">© 2024 Кулинарный сайт</p>
+
+</footer>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
